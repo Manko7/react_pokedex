@@ -25,22 +25,24 @@ class Pokemon extends React.Component {
                 {pokemon ? pokemon.map(
                     (p, id) => {
                         return (
-                            <div key={id} className="col-4 pokeCard" style={{border: "1px solid black"}}>
-                                <div className="row">
-                                    <h5>
-                                        #{id.toString().length >= 3 ? (id + 1) : id.toString().length >= 2 ? "0" + (id + 1) : "00" + (id + 1) }
-                                    </h5>
-                                </div>
-                                <div className="row">
-                                    <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (id + 1) + ".png"} alt="Pokemon" className="img-fluid mx-auto" />
-                                </div>
-                                <div className="row">
-                                    <h5 className="mx-auto">
-                                        <a href={p.url}>
-                                            {p.name}
-                                        </a>
-                                    </h5>
-                                </div>
+                            <div key={id} className="col-4">
+                                <a href={"/pokemon/" + (id+1)}>
+                                    <div className="pokeCard m-3">
+                                        <div className="row mx-3 pt-2">
+                                            <h5>
+                                                #{id.toString().length >= 3 ? (id + 1) : id.toString().length >= 2 ? "0" + (id + 1) : "00" + (id + 1) }
+                                            </h5>
+                                        </div>
+                                        <div className="row pokeImg mx-3">
+                                            <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (id + 1) + ".png"} alt="Pokemon" className="img-fluid mx-auto" />
+                                        </div>
+                                        <div className="row mx-3 pt-2">
+                                            <h5 className="mx-auto">
+                                                {p.name}
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         )
                     }

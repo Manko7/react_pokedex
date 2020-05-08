@@ -4,11 +4,22 @@ body {
   font-family: sans-serif;
 }
 
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .pokeCard {
-  height: 300px;
   text-transform: capitalize;
+  border-radius: 20px;
+  background-color: green;
 }
 
 .pokeCard img {
   width: 15em;
+}
+
+.pokeCard .pokeImg {
+  background-color: white;
+  border-radius: 20px;
 }
