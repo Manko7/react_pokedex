@@ -23,3 +23,7 @@ a, a:hover {
   background-color: white;
   border-radius: 20px;
 }
+
+ul {
+  list-style-type: none;
+}

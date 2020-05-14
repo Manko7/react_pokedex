@@ -27,7 +27,7 @@ class Pokemon extends React.Component {
                         return (
                             <div key={id} className="col-4">
                                 <a href={"/pokemon/" + (id+1)}>
-                                    <div className="pokeCard m-3">
+                                    <div className="pokeCard mt-1">
                                         <div className="row mx-3 pt-2">
                                             <h5>
                                                 #{id.toString().length >= 3 ? (id + 1) : id.toString().length >= 2 ? "0" + (id + 1) : "00" + (id + 1) }
@@ -37,9 +37,9 @@ class Pokemon extends React.Component {
                                             <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (id + 1) + ".png"} alt="Pokemon" className="img-fluid mx-auto" />
                                         </div>
                                         <div className="row mx-3 pt-2">
-                                            <h5 className="mx-auto">
+                                            <p className="mx-auto">
                                                 {p.name}
-                                            </h5>
+                                            </p>
                                         </div>
                                     </div>
                                 </a>
