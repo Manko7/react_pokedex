@@ -27,3 +27,7 @@ a, a:hover {
 ul {
   list-style-type: none;
 }
+
+.pokeDetail {
+  text-transform: capitalize;
+}
