@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-6">
                 <div className="row">
@@ -19,9 +19,6 @@ class App extends Component {
                 <Pokemon />
               </div>
               <div className="col-6">
-                <h3>
-                  Soon Pokedetail here
-                </h3>
                 <Route path="/pokemon/:poke_id" component={pokemonData} />
               </div>
             </div>

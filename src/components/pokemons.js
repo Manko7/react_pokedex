@@ -26,7 +26,7 @@ class Pokemon extends React.Component {
                     (p, id) => {
                         return (
                             <div key={id} className="col-4">
-                                <a href={"/pokemon/" + (id+1)}>
+                                <a href={"/pokemon/" + (id + 1)}>
                                     <div className="pokeCard mt-1">
                                         <div className="row mx-3 pt-2">
                                             <h5>
@@ -49,9 +49,14 @@ class Pokemon extends React.Component {
                         
                     )
                 :
-                    <p>
-                        You didn't see a pokemon yet ...
-                    </p>
+                    <div className="mx-auto">
+                        <div className="spinner-border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                        <p>
+                            Loading ...
+                        </p>
+                    </div>
                 }
             </div>
         );

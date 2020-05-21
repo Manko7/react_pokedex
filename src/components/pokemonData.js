@@ -36,9 +36,10 @@ class PokeData extends Component {
         const sprites = this.state.sprites;
         const stats = this.state.stats;
         const pokeType = this.state.types;
-        const progressBar = {
-            width: this.state.stats.stat.base_stat + "%",
-        }
+
+        // const progressStyle = {
+        //     width: "25%",
+        // }
 
         return (
             <div className="pokeDetail">
@@ -71,7 +72,9 @@ class PokeData extends Component {
                                 })
                                 :
                                 <li>
-                                    -
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only">Loading...</span>
+                                    </div>
                                 </li>
                             }
                         </ul>
@@ -83,14 +86,19 @@ class PokeData extends Component {
                                     return (
                                         <li key={index}>
                                             <div className="progress">
-                                                <div className="progress-bar" role="progressbar" style={progressBar} aria-valuenow={stat.base_stat} aria-valuemin={0} aria-valuemax={100}></div>
+                                                <div className="progress-bar" role="progress" style={{ width: stat.base_stat,}} aria-valuenow={stat.base_stat} aria-valuemin="0" aria-valuemax="100" />
                                             </div>
+                                            <p>
+                                                {stat.base_stat}
+                                            </p>
                                         </li>
                                     )
                                 })
                                 :
                                 <li>
-                                    -
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only">Loading...</span>
+                                    </div>
                                 </li>
                             }
                         </ul>
